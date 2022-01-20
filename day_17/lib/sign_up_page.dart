@@ -149,6 +149,29 @@ class SighUpTextFild extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    child: Text('Already have an account?'),
+                  ),
+                  Container(
+                    child: TextButton(
+                        onPressed: () {
+                          Route route = MaterialPageRoute(
+                            builder: (context) => TextFild(),
+                          );
+                          Navigator.push(context, route);
+                        },
+                        child: Text(
+                          'Login here',
+                          style: TextStyle(color: Colors.blue),
+                        )),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
